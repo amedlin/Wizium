@@ -52,3 +52,6 @@ Projects/**/Release
 
 # MacOS build system files
 **/.DS_Store
+
+# Python compiled byte code files
+**.pyc
