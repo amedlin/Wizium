@@ -12,7 +12,6 @@
 *.exp
 
 # Project user configuration
-*.filters
 *.user
 *.opendb
 *.vscode

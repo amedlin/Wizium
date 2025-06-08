@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\Sources\library.cpp" />
+    <ClCompile Include="..\..\Sources\library.Module.cpp" />
+    <ClCompile Include="..\..\Sources\libWizium.cpp" />
+    <ClCompile Include="..\..\Sources\Dictionary\Dictionary.cpp">
+      <Filter>Dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Grid\Box.cpp">
+      <Filter>Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Grid\Grid.cpp">
+      <Filter>Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Solvers\SolverDynamic.cpp">
+      <Filter>Solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Solvers\SolverDynamic.DynamicItem.cpp">
+      <Filter>Solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Solvers\SolverStatic.cpp">
+      <Filter>Solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Sources\Solvers\SolverStatic.StaticItem.cpp">
+      <Filter>Solvers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Sources\library.h" />
+    <ClInclude Include="..\..\Sources\library.Module.h" />
+    <ClInclude Include="..\..\Sources\libWizium.h" />
+    <ClInclude Include="..\..\Sources\Dictionary\Dictionary.h">
+      <Filter>Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Grid\Box.h">
+      <Filter>Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Grid\Grid.h">
+      <Filter>Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Solvers\SolverDynamic.DynamicItem.h">
+      <Filter>Solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Solvers\SolverDynamic.h">
+      <Filter>Solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Solvers\SolverStatic.h">
+      <Filter>Solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Solvers\SolverStatic.StaticItem.h">
+      <Filter>Solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Sources\Solvers\ISolver.h">
+      <Filter>Solvers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Dictionary">
+      <UniqueIdentifier>{c7a4700e-bf8a-42bb-9c74-825a6e4a566e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Grid">
+      <UniqueIdentifier>{03a49f0e-4617-4b4c-9b4e-8747b2e667e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solvers">
+      <UniqueIdentifier>{b9e3faf6-fd6a-4b57-8958-44ca0f9bc841}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
