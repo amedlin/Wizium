@@ -24,6 +24,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <chrono>
+#include <cassert>
 
 #include "SolverStatic.h"
 #include "SolverStatic.StaticItem.h"
@@ -114,7 +115,11 @@ void SolverStatic::Solve_Start (Grid &grid, const Dictionary &dico)
 	this->pGrid->LockContent ();
 
 	// Establish a static ordered list of word slots for whose we must find a solution
-	if (items != nullptr) delete [] items;
+	if (items != nullptr)
+	{
+		delete[] items;
+        items = nullptr;
+	}
 	BuildWordList ();
 	idxCurrentItem = 0;
 
@@ -186,7 +191,7 @@ Status SolverStatic::Solve_Step (int32_t maxTimeMs, int32_t maxSteps)
 		{
 			auto stop = std::chrono::system_clock::now ();
 			std::chrono::duration<double> duration = stop - start;
-			if (duration.count () >= maxTimeMs / 1000.0) break;
+			if (duration >= std::chrono::milliseconds(maxTimeMs)) break;
 		}
 		if (maxSteps >= 0)
 		{
@@ -677,6 +682,7 @@ void SolverStatic::BuildWordList ()
 	numItems = BuildWords (nullptr, 0);
 
 	// Allocate memory and actually build the list
+    assert(items == nullptr);
 	items = new StaticItem [numItems];
 	BuildWords (items, numItems);
 
