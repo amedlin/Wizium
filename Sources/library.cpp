@@ -76,7 +76,9 @@ void Library::DestroyInstance (Module* module)
 	const Module* p = this->modules;
 	
 	if (this->modules == module)
+	{
 		this->modules = module->next;
+	}
 	else
 	{
 		while (p && p->next && p->next != module) p = p->next;

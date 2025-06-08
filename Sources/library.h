@@ -76,7 +76,7 @@ private:
 	/// Unique instance of this singleton
 	static Library s_library;
 
-	/// All independant modules
+    /// All independant modules (as an inplace linked list)
 	const Module* modules;
 };
 
