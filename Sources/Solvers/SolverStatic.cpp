@@ -69,7 +69,7 @@ SolverStatic::~SolverStatic ()
 /// \param	state			True to activate the heuristic
 /// \param	stepBack		Heuristic level
 // ===========================================================================
-void SolverStatic::SetHeurestic (bool state, int stepBack)
+void SolverStatic::SetHeuristic (bool state, int stepBack)
 {
 	this->heurestic = state;
 	this->stepBack = stepBack;

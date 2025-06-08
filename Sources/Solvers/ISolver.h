@@ -44,7 +44,7 @@ public:
 	virtual Status Solve_Step (int32_t maxTimeMs, int32_t maxSteps) = 0;
 	virtual void Solve_Stop () = 0;
 
-	virtual void SetHeurestic (bool state, int param) = 0;
+	virtual void SetHeuristic (bool state, int param) = 0;
 	virtual void SetSeed (uint64_t seed) {this->seed = seed;}
 
 protected:

@@ -200,7 +200,7 @@ Status SolverDynamic::Solve_Step (int32_t maxTimeMs, int32_t maxSteps)
 		{
 			auto stop = std::chrono::system_clock::now ();
 			std::chrono::duration<double> duration = stop - start;
-			if (duration.count () >= maxTimeMs / 1000.0) break;
+			if (duration >= std::chrono::milliseconds(maxTimeMs)) break;
 		}
 		if (maxSteps >= 0)
 		{
@@ -222,7 +222,7 @@ Status SolverDynamic::Solve_Step (int32_t maxTimeMs, int32_t maxSteps)
 /// \param		state		True to activate the heuristic
 /// \param		stepBack	Number of steps back when solver is blocked
 // ===========================================================================
-void SolverDynamic::SetHeurestic (bool state, int stepBack)
+void SolverDynamic::SetHeuristic (bool state, int stepBack)
 {
 	this->heurestic = state;
 	this->stepBack = stepBack;

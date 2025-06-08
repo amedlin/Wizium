@@ -44,11 +44,12 @@ public:
 	SolverDynamic ();
 	~SolverDynamic ();
 
-	void Solve_Start (Grid &grid, const Dictionary &dico);
-	Status Solve_Step (int32_t maxTimeMs, int32_t maxSteps);
-	void Solve_Stop ();
+	void Solve_Start (Grid &grid, const Dictionary &dico) override;
+	Status Solve_Step (int32_t maxTimeMs, int32_t maxSteps) override;
+	void Solve_Stop () override;
 
-	void SetHeurestic (bool state, int stepBack);
+	void SetHeuristic (bool state, int stepBack) override;
+
 	void SetMaxBlackCases (int maxBlackCases) { this->maxBlackCases = maxBlackCases; }
 	void SetBlackCasesDensity (Grid::BlocDensityMode density) { this->densityMode = density; }
 

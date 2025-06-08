@@ -63,11 +63,11 @@ public:
 	SolverStatic ();
 	~SolverStatic ();
 
-	void SetHeurestic (bool state, int backTreshold);
+	void SetHeuristic (bool state, int backTreshold) override;
 		
-	void Solve_Start (Grid &grid, const Dictionary &dico);
-	Status Solve_Step (int32_t maxTimeMs, int32_t maxSteps);
-	void Solve_Stop ();
+	void Solve_Start (Grid &grid, const Dictionary &dico) override;
+	Status Solve_Step (int32_t maxTimeMs, int32_t maxSteps) override;
+	void Solve_Stop () override;
 
 private:
 
