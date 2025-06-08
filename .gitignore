@@ -41,3 +41,12 @@
 # *.exe
 *.out
 *.app
+
+# build folder
+build/**
+
+# Local builds
+Projects/**/x64
+Projects/**/libWizium
+Projects/**/Debug
+Projects/**/Release
