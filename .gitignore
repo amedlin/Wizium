@@ -49,3 +49,6 @@ Projects/**/x64
 Projects/**/libWizium
 Projects/**/Debug
 Projects/**/Release
+
+# MacOS build system files
+**/.DS_Store
