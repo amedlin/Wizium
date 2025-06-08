@@ -135,6 +135,7 @@ def solve (wiz, max_black=0, heuristic_level=0, seed=0, black_mode='DIAG'):
 # ============================================================================
 
     if not seed: seed = random.randint(1, 1000000)
+    print(f"Using seed {seed}")
 
     # Configure the solver
     wiz.solver_start (seed=seed, black_mode=black_mode, max_black=max_black, heuristic_level=heuristic_level)
@@ -251,7 +252,7 @@ def example_4():
 # ============================================================================
 
 # -->  C H O O S E  <--
-EXAMPLE = 4
+EXAMPLE = 1
 
 
 # Example with fixed pattern
