@@ -69,64 +69,58 @@ constexpr auto VER_RELEASE = 1;
 // ###########################################################################
 
 /// LibHandle on objects
-typedef uint64_t LibHandle;
+using LibHandle = uint64_t;
 
 /// Version of this library
-typedef struct
+struct Version
 {
 	int32_t major;				///< New feature breaking compatibilty
 	int32_t minor;				///< New feature not breaking compatibility
 	int32_t release;			///< Bux fix or enhancement
-}
-Version;
+};
 
 /// Instance configuration
-typedef struct
+struct Config
 {
 	int32_t alphabetSize;		///< 0: use the 26 standard ASCII letters. It also means that any text entry is in ASCII
 								///< Otherwise: fix the number of letters in the alphabet. Any text entry must contain
 								///< sequence of letters that are in the range [1..alphabetSize].
 	int32_t maxWordLength;		///< Max word length of any word in a grid. 
 								///< This number fixes the size of any pointer to word entries
-}
-Config;
+};
 
 /// The different grid box states
-typedef enum
+enum BoxType
 {
 	LETTER = 0,					///< The box holds a letter
 	VOID = 1,					///< The box is not used (for non squared grids)
 	BLACK = 2					///< The box is a black blox
-}
-BoxType;
+};
 
 /// Rule for generation of black boxes
-typedef enum
+enum BlackMode
 {
 	ANY = 0,				///< No rules to place black boxes
 	SINGLE = 1,				///< Black boxes cannot touch together
 	TWO = 2,				///< Two black boxes can touch, no more
 	DIAGONAL = 3,			///< Black boxes can touch in diagonal only
-}
-BlackMode;
+};
 
 /// Solver configuration
-typedef struct
+struct SolverConfig
 {
 	uint32_t seed;				///< RNG seed
 	int32_t maxBlackBoxes;		///< Max number of black cases that can be added to the grid
 	int32_t heuristicLevel;		///< Heurisitic level (<=0: no heuristic)
 	BlackMode blackMode;		///< Rule for the generation of black boxes
-}
-SolverConfig;
+};
 
 /// Status of the grid generation process
-typedef struct 
+struct Status
 {
 	uint64_t counter;		///< Total number of words tried
 	int32_t fillRate;		///< Current fill rate [%]. 0: generation failed. 100: generation successful
-}
-Status;
+};
 
 
 // ###########################################################################
